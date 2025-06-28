@@ -24,3 +24,4 @@ jobs:
       with:
         artifacts: "${{ env.ARTIFACT }},${{ env.RMARTIFACT }}"
         tag: ${{ inputs.tag }}
+        body: 使用说明见[README.md](README.md)，更新日志见[CHANGELOG.md](CHANGELOG.md)。
