@@ -27,3 +27,7 @@
 1. 下载本仓库的[RM-ACE-Priority-Tuner.cmd](RM-ACE-Priority-Tuner.cmd)
 2. 右键文件，选择`以管理员身份运行`
 3. 运行完毕后，重新启动计算机
+
+## 更新日志
+
+见[CHANGELOG.md](CHANGELOG.md)
