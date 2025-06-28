@@ -23,17 +23,17 @@ set "APPS=ACE-Tray.exe SGuardUpdate64.exe SGuardSvc64.exe SGuard64.exe ACE-Servi
 
 :: 循环遍历每个应用程序
 for %%A in (%APPS%) do (
-  echo.
-  echo 正在为 %%A 添加注册表项...
-  
-  :: CpuPriorityClass
-  reg add "%BASE_REG_PATH%\%%A\PerfOptions" /v "CpuPriorityClass" /t REG_DWORD /d 0 /f
-  
-  :: IoPriority
-  reg add "%BASE_REG_PATH%\%%A\PerfOptions" /v "IoPriority" /t REG_DWORD /d 0 /f
-  
-  :: PagePriority
-  reg add "%BASE_REG_PATH%\%%A\PerfOptions" /v "PagePriority" /t REG_DWORD /d 0 /f
+    echo.
+    echo 正在为 %%A 添加注册表项...
+
+    :: CpuPriorityClass
+    reg add "%BASE_REG_PATH%\%%A\PerfOptions" /v "CpuPriorityClass" /t REG_DWORD /d 0 /f
+
+    :: IoPriority
+    reg add "%BASE_REG_PATH%\%%A\PerfOptions" /v "IoPriority" /t REG_DWORD /d 0 /f
+
+    :: PagePriority
+    reg add "%BASE_REG_PATH%\%%A\PerfOptions" /v "PagePriority" /t REG_DWORD /d 0 /f
 )
 
 echo.
