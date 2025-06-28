@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag'
+        required: true
+        default: 'v2025.6.28.1'
+
+env:
+  ARTIFACTS: ACE-Priority-Tuner.cmd
+  RMARTIFACTS: RM-ACE-Priority-Tuner.cmd
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "${{ env.ARTIFACTS }},${{ env.RMARTIFACTS }}"
+        tag: ${{ inputs.tag }}
