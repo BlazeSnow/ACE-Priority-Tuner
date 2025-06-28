@@ -12,6 +12,9 @@ env:
   ARTIFACT: ACE-Priority-Tuner.cmd
   RMARTIFACT: RM-ACE-Priority-Tuner.cmd
 
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest
