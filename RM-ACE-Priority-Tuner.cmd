@@ -35,6 +35,7 @@ for %%A in (%APPS%) do (
 
 echo.
 echo 所有注册表处理完毕.
+echo 注意:请重新启动计算机以使配置生效.
 echo.
 pause
 exit
