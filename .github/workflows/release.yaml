@@ -9,8 +9,8 @@ on:
         default: 'v2025.6.28.1'
 
 env:
-  ARTIFACTS: ACE-Priority-Tuner.cmd
-  RMARTIFACTS: RM-ACE-Priority-Tuner.cmd
+  ARTIFACT: ACE-Priority-Tuner.cmd
+  RMARTIFACT: RM-ACE-Priority-Tuner.cmd
 
 jobs:
   release:
@@ -22,5 +22,5 @@ jobs:
     - name: Release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "${{ env.ARTIFACTS }},${{ env.RMARTIFACTS }}"
+        artifacts: "${{ env.ARTIFACT }},${{ env.RMARTIFACT }}"
         tag: ${{ inputs.tag }}
